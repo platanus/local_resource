@@ -1,5 +1,7 @@
 # Local Resource
 
+[![Build Status](https://travis-ci.org/platanus/local_resource.svg?branch=master)](https://travis-ci.org/platanus/local_resource)
+
 Rails engine to take a file from a url, download it to the tmp, use it and delete it
 
 ## Installation
