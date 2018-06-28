@@ -14,15 +14,30 @@ gem "local_resource"
 bundle install
 ```
 
-Then, run the installer:
-
-```bash
-rails generate local_resource:install
-```
-
 ## Usage
 
-TODO
+### Using `Instance`
+
+```ruby
+instance = LocalResource::Instance.new("http://lorempixel.com/400/200", "my-photo.jpeg")
+instance.file # it downloads the photo from lorempixel.com to the tmp file.
+instance.file_path # it shows the local path of your downloaded image.
+instance.destroy # it removes the photo from the /tmp directory.
+```
+
+### Using `as_local_resource`
+
+```ruby
+LocalResource.as_local_resource("http://lorempixel.com/400/200", "my-photo.jpeg") do |tmp_file_path|
+  # some code needing the local file.
+end
+```
+
+The previous code...
+
+- It downloads the photo from lorempixel.com to the tmp file.
+- It executes custom code that needs the local file.
+- It removes the tmp file from tmp.
 
 ## Testing
 
