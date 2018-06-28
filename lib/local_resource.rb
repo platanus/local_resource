@@ -22,4 +22,11 @@ module LocalResource
     yield self
     require "local_resource"
   end
+
+  def as_local_resource(url, tmp_filename, &block)
+    instance = LocalResource::Instance.new(url, tmp_filename)
+    block.call(instance.file_path)
+  ensure
+    instance&.destroy
+  end
 end

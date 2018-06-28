@@ -2,7 +2,10 @@ require "rails_helper"
 
 RSpec.describe LocalResource::Instance do
   let(:file) { fixture_file_upload("image.png", "image/png") }
-  subject { described_class.new("http://someurl/file.png", "my-file.png") }
+  let(:file_name) { "my-file.png" }
+  let(:url) { "http://someurl/file.png" }
+
+  subject { described_class.new(url, file_name) }
 
   before do
     allow_any_instance_of(described_class).to receive(:load_downloaded_data).and_return(file.read)
