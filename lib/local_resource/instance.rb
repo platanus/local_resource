@@ -1,3 +1,5 @@
+require 'open-uri'
+
 module LocalResource
   class Instance
     def initialize(url, tmp_filename)
