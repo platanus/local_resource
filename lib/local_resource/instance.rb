@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'open_uri_redirections'
 
 module LocalResource
   class Instance
@@ -30,7 +31,7 @@ module LocalResource
     private
 
     def load_downloaded_data
-      open(@url) do |io|
+      open(@url, allow_redirections: :all) do |io|
         return io.read
       end
     end

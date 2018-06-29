@@ -4,7 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Unreleased
 
-#### 0.1.1
+#### Added
+
+* Add open_uri_redirections gem to perform redirections.
+
+### 0.1.1
+
+#### Fixed
 
 * Require open-uri to point right open method.
 
