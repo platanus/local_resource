@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe LocalResource::Instance do
-  let(:file) { fixture_file_upload("image.png", "image/png") }
+  let(:file) { fixture_file_upload("spec/dummy/spec/assets/image.png") }
   let(:file_name) { "my-file.png" }
   let(:url) { "http://someurl/file.png" }
 
