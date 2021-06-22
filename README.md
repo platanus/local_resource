@@ -53,6 +53,16 @@ bundle exec guard
 
 You need to put **all your tests** in the `/local_resource/spec/dummy/spec/` directory.
 
+## Publishing
+
+On master/main branch...
+
+1. Change `VERSION` in `lib/local_resource/version.rb`.
+2. Change `Unreleased` title to current version in `CHANGELOG.md`.
+3. Commit new release. For example: `Releasing v0.1.0`.
+4. Create tag. For example: `git tag v0.1.0`.
+5. Push tag. For example: `git push origin v0.1.0`.
+
 ## Contributing
 
 1. Fork it

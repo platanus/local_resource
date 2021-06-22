@@ -81,7 +81,8 @@ jobs:
           name: Publish to rubygems
           command: |
             gem build local_resource.gemspec
-            gem push "local_resource-$(git describe --tags).gem"
+            version_tag=$(git describe --tags)
+            gem push local_resource-${version_tag#v}.gem
 
 workflows:
   version: 2
