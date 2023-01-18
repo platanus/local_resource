@@ -125,6 +125,8 @@ GEM
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.11.7-x86_64-linux)
+      racc (~> 1.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -140,7 +142,7 @@ GEM
       pry (>= 0.10.4)
     psych (4.0.1)
     racc (1.5.2)
-    rack (2.2.3)
+    rack (2.2.6.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.3.2)
@@ -239,6 +241,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   coveralls
